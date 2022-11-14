@@ -41,7 +41,7 @@ function App() {
               type="text" 
               
               required
-              placeholder='Qual o título que deseja assistir hoje?'
+              placeholder='Qual título você procura?'
               onChange={event => setTitle(event.target.value)}
               value={title}
             />
