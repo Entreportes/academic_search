@@ -5,6 +5,7 @@ import './App.css'
 function App() {
   
   const [title, setTitle] = useState('')
+  const [subtitle, setSubtitle] = useState('')
   const [urlRarbg, setUrlRarbg] = useState('')
   const [urlComando, setUrlComando] = useState('')
   const [optionResolution, setOptionResolution] = useState(false)
@@ -24,13 +25,14 @@ function App() {
       : 
       setUrlComando('https://comandotorrents.to/?s='.concat(title.replaceAll(' ','+')).concat('+1080'))
     }
+    setSubtitle('https://www.opensubtitles.org/en/search2/sublanguageid-pob/moviename-'.concat(title.replaceAll(' ','+')))
   }
 
   return (
     <div >
       <div>
         
-        <img src={reactLogo} className="logo react" alt="React logo" />
+        <img src={reactLogo} className="logo" alt="React logo" />
         
       </div>
       <h1>O que você quer assistir hoje?</h1>
@@ -59,6 +61,10 @@ function App() {
       <a href={urlComando}>
         <h2>Comando Torrent</h2>
         <text>{urlComando}</text>
+      </a>
+      <a href={subtitle}>
+        <h2>Subtitles</h2>
+        <text>{subtitle}</text>
       </a>
       </div>
     </div>

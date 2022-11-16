@@ -7,14 +7,20 @@
 
 
 .logo {
+  position: relative;
+  z-index: 10;
   height: 6em;
-  padding: 1.5em;
+  padding: 1em;
   will-change: filter;
 }
 .logo:hover {
+  position:relative;
+  z-index: 100;
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
+  position:relative;
+  z-index: 100;
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
